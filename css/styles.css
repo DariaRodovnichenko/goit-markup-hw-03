@@ -54,14 +54,10 @@ address {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 
 /**HEADER*/
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
   border-bottom: 1px solid #e7e9fc;
 }
 
@@ -149,7 +145,6 @@ address {
 /**HERO*/
 .hero {
   background-color: var(--second-bg-color);
-  padding: 188px 472px;
   margin-right: auto;
   margin-left: auto;
   max-width: 1440px;
@@ -173,7 +168,7 @@ address {
   width: 496px;
   height: 120px;
   margin-top: 0;
-  margin-bottom: 48px;
+  margin: 188px 472px 48px 472px;
 }
 
 .hero-btn {
@@ -186,6 +181,7 @@ address {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  margin-bottom: 188px;
 }
 
 .hero-btn-text {
@@ -206,19 +202,19 @@ address {
 /**Advantages*/
 .advantages {
   padding-top: 120px;
-  margin-bottom: 120px;
-  margin-right: 156px;
-  margin-left: 156px;
 }
 
-.section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 40px;
-  text-align: center;
-  letter-spacing: var(--general-letter-spacing);
-  text-transform: capitalize;
-  color: var(--title-text-color);
+.visualy-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .adv-list {
@@ -239,11 +235,12 @@ address {
   font-size: 16px;
   line-height: var(--line-height);
   letter-spacing: var(--general-letter-spacing);
-  margin: 0;
+  margin-top: 8px;
 }
 
 /**Our Works*/
 .container-our-works {
+  padding-top: 120px;
   margin-bottom: 120px;
 }
 
@@ -289,7 +286,10 @@ address {
 }
 
 .team-list-item {
-  background-color: #fff;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
 }
 .team-member {
   font-weight: 500;
@@ -320,9 +320,11 @@ address {
 }
 
 .footer-container {
-  width: 264px;
-  height: 112px;
-  padding: 100px 1020px 100px 156px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 156px;
+  width: 1440px;
+  height: 312px;
 }
 
 .footer-text {
@@ -332,18 +334,20 @@ address {
   color: #e7e9fc;
   margin-top: 16px;
   margin-bottom: 100px;
+  max-width: 264px;
 }
 
 /**PORTFOLIO*/
-.portfolio-container {
+.portfolio {
   padding-top: 96px;
-  padding-bottom: 72px;
+  padding-bottom: 120px;
 }
 
 .portfolio-list {
   display: flex;
   justify-content: center;
   gap: var(--flex-list-gap);
+  margin-bottom: 72px;
 }
 
 .portfolio-btn {
@@ -351,10 +355,12 @@ address {
   font-weight: 500;
   font-size: 16px;
   line-height: var(--line-height);
-  display: flex;
   align-items: var(--general-align-items);
   text-align: var(--general-align-items);
   letter-spacing: 0.04em;
+  padding: 12px 24px;
+  min-width: 78px;
+  height: 48px;
   color: #4d5ae5;
   background: #f4f4fd;
   border: 1px solid #e7e9fc;
@@ -375,27 +381,39 @@ address {
 .gallery-list {
   display: flex;
   justify-content: center;
+  column-gap: var(--flex-list-gap);
+  row-gap: 48px;
   flex-wrap: wrap;
-  gap: var(--flex-list-gap);
-  padding-bottom: 120px;
 }
 
-.example-gallery {
-  border: 1px solid #e7e9fc;
+.gallery-card {
+  width: 360px;
+  height: 420px;
 }
-.example-gallery-title {
+
+.card-info {
+  padding: 32px 0px;
+  border-right: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+}
+
+.card-title {
+  font-style: inherit;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: var(--general-letter-spacing);
   color: var(--title-text-color);
   text-transform: capitalize;
-  margin-top: 32px;
   margin-bottom: 8px;
+  margin-left: 16px;
 }
 
-.example-gallery-text {
+.card-text {
+  font-style: inherit;
   line-height: var(--line-height);
   letter-spacing: var(--general-letter-spacing);
   color: var(--primary-text-color);
+  margin-left: 16px;
 }
