@@ -151,6 +151,9 @@ address {
   margin-right: auto;
   margin-left: auto;
   max-width: 1440px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/hero.jpg");
+  background-size: cover;
 }
 
 .hero-container {
@@ -313,6 +316,10 @@ address {
   text-align: var(--general-align-items);
   letter-spacing: var(--general-letter-spacing);
   margin-top: 8px;
+}
+
+.social-list {
+  display: flex;
 }
 
 /**FOOTER*/
